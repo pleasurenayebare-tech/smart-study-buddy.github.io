@@ -1,24 +1,21 @@
-<div class="menu">
-  <div class="menu-table flex-row-space-between">
-    <div class="logo flex-row-center">
-      <a href="index.html">Project Title</a>
-    </div>
-    <a class="menu-button" tabindex="0" href="javascript:void(0)">
-      <img src="img/menu.png">
-    </a>
-    <div class="menu-items flex-row-center flex-item">
-      <a class="menu-index" href="index.html">Overview</a>
-      <a class="menu-widget" href="widgets.html">Widgets</a>
-      <a class="menu-embedding" href="embedding.html">Embedding</a>
-      <div class="dropdown">
-        <a class="dropbtn" href="empty.html">Dropdown<i class="fas fa-caret-down"></i></a>
-        <div class="dropdown-content">
-          <a href="index.html">Overview</a>
-          <a href="widgets.html">Widgets</a>
-          <a href="embedding.html">Embedding</a>
-        </div>
-      </div>
-      <a href="https://github.com/yenchiah/project-website-template">GitHub</a>
-    </div>
+<!-- ============================================================
+     menu.html — Smart Study Buddy navigation bar
+     This file is loaded dynamically by js/menu.js into
+     the <div class="menu-container"> on every page.
+     ============================================================ -->
+<nav class="menu">
+  <div class="menu-logo">
+    <!-- App name as text logo — replace with <img> if you have a logo file -->
+    <a href="index.html">📚 Smart Study Buddy</a>
   </div>
-</div>
+  <div class="menu-main">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#team">Team</a></li>
+      <!-- TODO: Add your GitHub repo link below -->
+      <li><a href="https://github.com/YOUR-USERNAME/smart-study-buddy" target="_blank">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
