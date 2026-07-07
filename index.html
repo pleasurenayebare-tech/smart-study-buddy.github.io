@@ -73,8 +73,7 @@
               Smart Study Buddy is a mobile application designed to solve the everyday challenge students face when searching for reliable academic resources and study partners. Built with <strong>Flutter</strong> and powered by <strong>Firebase</strong>, the app brings notes, past examination papers, academic information, and peer discussion groups together in one unified platform.
             </p>
             <p>
-              <!-- TODO: Replace placeholder links with your real GitHub Pages URL and repo URL before submission -->
-              <a class="btn btn-primary" href="https://github.com/YOUR-USERNAME/smart-study-buddy" target="_blank">GitHub Repository</a>
+              <a class="btn btn-primary" href="https://github.com/pleasurenayebare-tech/smart-study-buddy.github.io" target="_blank">GitHub Repository</a>
               &nbsp;
               <a class="btn" href="#features">Explore Features</a>
             </p>
@@ -165,6 +164,9 @@
             <p>
               The application is built using <strong>Flutter</strong> for a cross-platform mobile experience (Android and iOS from a single codebase). All backend services are handled by <strong>Firebase</strong> — Firestore for the database, Firebase Storage for file uploads, Firebase Authentication for user accounts, and Firebase Cloud Messaging for push notifications.
             </p>
+            <div class="status-badge" style="margin-top:12px; display: inline-block; background: #fff3cd; color: #856404; font-weight: 500; border: 1px solid #ffeeba; padding: 10px;">
+              Web Firebase status: <span id="firebase-status">Initializing Firebase...</span>
+            </div>
           </div>
         </div>
 
@@ -189,22 +191,22 @@
                 <tbody>
                   <tr>
                     <td><code>users</code></td>
-                    <td>uid, name, email, joinedGroups[ ], uploadCount</td>
+                    <td>uid, fullName, email, role, joinedGroups[ ]</td>
                     <td>Student profiles and contribution tracking</td>
                   </tr>
                   <tr>
                     <td><code>notes</code></td>
-                    <td>title, courseCode, uploadedBy, fileURL, rating, timestamp</td>
+                    <td>title, content, userId, summary, mindMap, updatedAt</td>
                     <td>Shared lecture notes and past papers</td>
                   </tr>
                   <tr>
                     <td><code>study_groups</code></td>
-                    <td>name, courseCode, description, members[ ], createdBy</td>
+                    <td>name, description, ownerId, members[ ], createdAt</td>
                     <td>Course-based discussion and study groups</td>
                   </tr>
                   <tr>
                     <td><code>messages</code></td>
-                    <td>groupId, senderId, text, timestamp</td>
+                    <td>groupId, senderId, text, createdAt</td>
                     <td>In-group chat messages</td>
                   </tr>
                 </tbody>
@@ -331,8 +333,9 @@
             <h2>Project Links</h2>
             <hr>
             <p>
-              <!-- TODO: Replace # with your real URLs -->
-              <a class="btn btn-primary" href="https://github.com/YOUR-USERNAME/smart-study-buddy" target="_blank">GitHub Repository</a>
+              <a class="btn btn-primary" href="https://github.com/pleasurenayebare-tech/smart-study-buddy.github.io" target="_blank">GitHub Repository</a>
+              &nbsp;
+              <a class="btn" href="https://pleasurenayebare-tech.github.io/smart-study-buddy.github.io/" target="_blank">Live Demo</a>
               &nbsp;
               <a class="btn" href="file/smart-study-buddy-abstract.pdf" target="_blank">Project Abstract (PDF)</a>
             </p>
@@ -344,5 +347,11 @@
   </div><!-- end content-container -->
 
   <div class="footer-container"></div>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-messaging-compat.js"></script>
+  <script src="js/firebase-init.js"></script>
 </body>
 </html>
